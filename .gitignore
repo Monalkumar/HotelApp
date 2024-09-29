@@ -1,0 +1,55 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Dependency directories
+jspm_packages/
+
+# Logs
+npm-debug.log*
+
+
+# Environment variable files
+.env
+.env.development
+.env.production
+.env.test
+.env.local
+
+# Editor-specific directories and files
+.vscode/
+.idea/
+
+
+
+
+# Cache directories
+.cache/
+.parcel-cache/
+
+# ESLint cache
+.eslintcache
+
+# Testing
+*.log
+__tests__
+__mocks__
+*.test.js
+*.spec.js
+*.test.ts
+*.spec.ts
+
+# Service workers
+service-worker.js
+
+# Webpack files (if any)
+webpack.config.js
+webpack.config.*
+
+# Storybook
+.storybook/
+*.story.js
+*.stories.js
