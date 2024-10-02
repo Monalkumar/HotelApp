@@ -1,54 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+// import Header from "./components/Header";
+// import Body from "./components/Body";
 
 const Header = () => {
   return (
-    <div
-      className="header"
-      style={{ display: "flex", border: "1px solid black" }}
-    >
-      <div className="logo">
-        <img
-          alt="logo"
-          className="logo w-32 h-32"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiUAh3i18NblxHIu5qKuT2p0Wg_XGYLiCKav_vaZh1tBM8Z7teYZowjZjFcPSCE0B2T08&usqp=CAU"
-        />
+    <div className="header" style={{ display: "flex" }}>
+      <div className="Logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiUAh3i18NblxHIu5qKuT2p0Wg_XGYLiCKav_vaZh1tBM8Z7teYZowjZjFcPSCE0B2T08&usqp=CAU" />
       </div>
-
-      <div className="nav-bar" style={{ display: "grid" }}>
-        <ul style={{ paddingLeft: "65rem", display: "flex" }}>
+      <div className="navBar" style={{ display: "flex" }}>
+        <ul>
           <li>Home</li>
+          <li>Conatct</li>
           <li>About</li>
-          <li>Contact</li>
-          <li>Contact</li>
         </ul>
       </div>
     </div>
   );
 };
-const ResCard = (props) => {
-  const { resData } = props;
 
-  return (
-    <div className="rescard">
-      <div className="cardLogo" style={{ display: "flex" }}>
-        <img
-          src={
-            "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-            resData.info.cloudinaryImageId
-          }
-          style={{ height: "195px" }}
-        />
-      </div>
-      <h2>{resData.info.name}</h2>
-      <h2>{resData.info.avgRating}</h2>
-    </div>
-  );
-};
-
-const resList = [
+const resList= [
   {
-    info: {
+   info: {
       id: "336824",
       name: "Onesta",
       cloudinaryImageId: "pc1jf2sxhcz4uhbpi3b2",
@@ -1607,19 +1581,39 @@ const resList = [
   },
 ];
 
+
+
+
+
+
+const RestaurantCard = (props) => {
+  const {resData}= props;
+  return (
+    <div className="res-card">
+      <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+props.resData.info.cloudinaryImageId}
+        style={{ height: "195px" }}
+      />
+      <h2>{props.resData.info.name}</h2>
+      <h2>{props.resData.info.avgRating}</h2>
+      <h2>cuisines</h2>
+    </div>
+  );
+};
+
 const Body = () => {
   return (
     <div className="body">
       <div className="search">
-        <h3>Serach</h3>
-      </div>
-      <div
-        className="resContainer"
-        style={{ display: "flex", flexWrap: "wrap" }}
-      >
-        {resList.map((restaurant) => (
-          <ResCard key={restaurant.info.id} resData={restaurant} />
-        ))}
+        <h3>search</h3>
+        <div className="resContainer">
+          <RestaurantCard resData={resList[1]} />
+          <RestaurantCard resData={resList[2]} />
+          <RestaurantCard resData={resList[3]} />
+          <RestaurantCard resData={resList[4]} />
+          <RestaurantCard resData={resList[5]} />
+          <RestaurantCard resData={resList[6]} />
+          <RestaurantCard resData={resList[7]} />
+        </div>
       </div>
     </div>
   );
