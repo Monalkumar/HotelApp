@@ -1,2 +1,2 @@
-// export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-// export const LOGO_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiUAh3i18NblxHIu5qKuT2p0Wg_XGYLiCKav_vaZh1tBM8Z7teYZowjZjFcPSCE0B2T08&usqp=CAU"
+export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+export const LOGO_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiUAh3i18NblxHIu5qKuT2p0Wg_XGYLiCKav_vaZh1tBM8Z7teYZowjZjFcPSCE0B2T08&usqp=CAU"
